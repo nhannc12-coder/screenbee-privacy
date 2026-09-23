@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScreenBee — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0B0B14;
+      --card: #161625;
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #FFB300;
+      --text: #FFFFFF;
+      --text-sub: #9E9EBA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 820px;
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #FFD600, #FF9100);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    h1 { font-size: 24px; font-weight: 800; }
+    .updated { font-size: 13px; color: var(--text-sub); }
+    h2 { font-size: 17px; color: var(--primary); margin: 28px 0 12px; font-weight: 700; }
+    p, li { color: #D1D1E0; font-size: 14.5px; margin-bottom: 10px; }
+    ul { padding-left: 24px; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 13.5px; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: rgba(255,255,255,0.04); color: #fff; font-weight: 700; }
+    td { color: #D1D1E0; }
+    code { background: rgba(255,255,255,0.07); padding: 1px 5px; border-radius: 4px; font-size: 12.5px; }
+    .highlight-box {
+      background: rgba(255, 179, 0, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #FFF;
+    }
+    a { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <svg width="32" height="32" viewBox="0 0 100 100">
+          <ellipse cx="50" cy="50" rx="28" ry="22" fill="#1a1a2e" opacity="0.85"/>
+          <rect x="22" y="42" width="56" height="5" rx="2" fill="#FFD600"/>
+          <rect x="22" y="52" width="56" height="5" rx="2" fill="#FFD600"/>
+          <circle cx="40" cy="38" r="4" fill="#FFD600"/>
+          <circle cx="60" cy="38" r="4" fill="#FFD600"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Privacy Policy — ScreenBee 🐝</h1>
+        <p class="updated">Version 1.1.0 · Last updated: September 2026</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <strong>In short:</strong> your recordings never leave your computer. ScreenBee runs no servers and no analytics.
+      The only personal data involved is an optional email address you may enter to start a free trial — and even that is
+      stored in your own browser, not sent to us.
+    </div>
+
+    <h2>1. What ScreenBee stores, and where</h2>
+    <table>
+      <tr><th>Data</th><th>Where it lives</th><th>Why</th></tr>
+      <tr>
+        <td>Video &amp; audio you record</td>
+        <td>In browser memory while recording, then written as a <code>.webm</code> file to your Downloads folder</td>
+        <td>This is the product. Nothing is uploaded anywhere.</td>
+      </tr>
+      <tr>
+        <td>Preferences (language, recording mode, quality, mic on/off)</td>
+        <td><code>chrome.storage.local</code> on this device</td>
+        <td>So the extension opens the way you left it</td>
+      </tr>
+      <tr>
+        <td><strong>Email address (optional)</strong></td>
+        <td><code>chrome.storage.local</code> and <code>chrome.storage.sync</code></td>
+        <td>Only if you choose to start the 7-day PRO trial. Used to count trial days and prevent the same trial being restarted repeatedly. You can skip this and keep using the free plan.</td>
+      </tr>
+      <tr>
+        <td>License key, activation date, random device ID</td>
+        <td><code>chrome.storage.local</code> / <code>chrome.storage.sync</code></td>
+        <td>To keep a PRO purchase active on this device</td>
+      </tr>
+    </table>
+    <p>
+      <strong>About Chrome Sync:</strong> anything written to <code>chrome.storage.sync</code> is synchronised by Google
+      across Chrome profiles you are signed into. That is a Chrome feature; ScreenBee has no access to Google's copy.
+    </p>
+
+    <h2>2. Network connections</h2>
+    <p>ScreenBee makes exactly one kind of outbound request, and only when you ask it to:</p>
+    <ul>
+      <li>When you activate or re-validate a PRO license key, the key is sent to Lemon Squeezy
+        (<code>api.lemonsqueezy.com</code>) to check whether it is valid. Re-validation happens at most once every 3 days.</li>
+    </ul>
+    <p>There is no analytics, telemetry, crash reporting, advertising or tracking script, and no remotely hosted font or
+      code. Your recordings are never transmitted.</p>
+
+    <h2>3. Browser permissions and why each is needed</h2>
+    <ul>
+      <li><strong>tabCapture</strong> — captures video and audio of the browser tab you chose to record.</li>
+      <li><strong>activeTab</strong> + <strong>scripting</strong> — draws the countdown, the floating control bar and the
+        webcam bubble on the page being recorded.</li>
+      <li><strong>Camera &amp; microphone</strong> (requested by the browser at the moment of use) — captures your webcam
+        bubble and narration. Streams are processed in memory and released as soon as recording ends.</li>
+      <li><strong>offscreen</strong> — runs MediaRecorder in a hidden document, as Manifest V3 requires.</li>
+      <li><strong>storage</strong> — saves the preferences and license data listed in section 1.</li>
+      <li><strong>downloads</strong> — writes the finished <code>.webm</code> file to your Downloads folder.</li>
+      <li><strong>Access to all websites (optional, off by default)</strong> — you may grant this so the control bar
+        survives when you navigate to another page mid-recording. ScreenBee never reads or transmits page content, and if
+        you decline, recording still works normally.</li>
+    </ul>
+
+    <h2>4. Data sharing and selling</h2>
+    <p>We do not sell, rent, trade or share user data with third parties. Apart from license validation, no data ever
+      reaches us in the first place.</p>
+
+    <h2>5. Retention and deletion</h2>
+    <p>Recording data is discarded from memory once the file is written. To erase everything else, remove the extension at
+      <code>chrome://extensions</code>, or use "Deactivate on this device" in the PRO panel to delete the stored license.
+      Uninstalling clears local storage; synced values are removed by Chrome from your profile.</p>
+
+    <h2>6. Children's privacy</h2>
+    <p>ScreenBee is not directed at children under 13 and we do not knowingly collect their data. The only field a user
+      can type into is an optional email address.</p>
+
+    <h2>7. Changes to this policy</h2>
+    <p>Material changes will be published here with a new date and version number before they take effect.</p>
+
+    <h2>8. Contact</h2>
+    <p>Questions or data requests: <a href="mailto:nhannc12@gmail.com">nhannc12@gmail.com</a></p>
+  </div>
+</body>
+</html>
